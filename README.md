@@ -1,0 +1,1 @@
+Icon storage for designers
