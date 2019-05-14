@@ -10,15 +10,16 @@ import { environment } from '../environments/environment';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-  items: Observable<any[]>;
+  searchTerm: string;
+
   uploadPercent: Observable<number>;
   downloadURL: string;
   _db:AngularFirestore;
-  imageSrc = 'https://firebasestorage.googleapis.com/v0/b/'+environment.firebaseConfig.storageBucket+'/o/icons%2F';
+  imageSrc = 'https://firebasestorage.googleapis.com/v0/b/'+environment.firebaseConfig.storageBucket+'/o/';
 
   constructor(db: AngularFirestore, private storage: AngularFireStorage) {
-    this.items = db.collection('icons').valueChanges();
     this._db = db;
   }
 
@@ -37,5 +38,8 @@ export class AppComponent {
     //     finalize( () => this.downloadURL = this.success )
     // )
     // .subscribe()
+  }
+  receivedData(value) {
+    this.searchTerm = value;
   }
 }

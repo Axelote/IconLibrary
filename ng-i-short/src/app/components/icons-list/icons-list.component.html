@@ -1,0 +1,6 @@
+<div class="icons">
+  <div class="icons-wrap" *ngIf="icons">
+    <app-icons-item *ngFor="let icon of icons | async | iconFilter: searchTerm" [icon]="icon"></app-icons-item>
+  </div>
+  <app-icon-selected></app-icon-selected>
+</div>

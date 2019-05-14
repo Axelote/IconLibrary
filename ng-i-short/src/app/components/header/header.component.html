@@ -1,0 +1,12 @@
+<header class="header">
+  <div class="layout">
+    <div class="search">
+      <div class="search-wrap">
+        <svg aria-hidden="true" class="search-icon" height="24" width="24">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+        </svg>
+        <input class="input input-text" type="text" placeholder="Search" [ngModel]="searchTerm" (ngModelChange)="onNameChange($event)">
+      </div>
+    </div>
+  </div>
+</header>
