@@ -45,6 +45,14 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+}
 
 @font-face {
   font-family: "Rozetka";
@@ -78,4 +86,9 @@ body {
   box-sizing: border-box;
   font-size: 14px;
   font-family: "Rozetka";
+  outline: none;
+
+  &:focus {
+    border-color: #00A046;
+  }
 }

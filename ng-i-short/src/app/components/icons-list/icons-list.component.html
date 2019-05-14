@@ -1,6 +1,7 @@
 <div class="icons">
   <div class="icons-wrap" *ngIf="icons">
-    <app-icons-item *ngFor="let icon of icons | async | iconFilter: searchTerm" [icon]="icon"></app-icons-item>
+    <app-icons-item *ngFor="let icon of icons | async | iconFilter: searchTerm" [icon]="icon"
+      (makeVisible)="toggleVisibility($event)"></app-icons-item>
   </div>
-  <app-icon-selected></app-icon-selected>
 </div>
+<app-icon-selected *ngIf="selected" (makeHidden)="toggleVisibility($event)" [selectedIcon]="icon"></app-icon-selected>

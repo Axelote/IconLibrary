@@ -1,3 +1,28 @@
-<p>
-  icon-selected works!
-</p>
+<div class="icon-selected">
+  <div class="icon-selected__heading">
+    <button class="btn-close" (click)="toggleSelected(false)">
+      <svg aria-hidden="true" class="" height="24" width="24">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+      </svg>
+    </button>
+    <h2>Длинное название иконки</h2>
+  </div>
+  <div class="icon-selected__content">
+    <figure class="icon-selected__image">
+      <img src="" alt="">
+    </figure>
+    <p class="caption">
+      <span>Размер: </span>24 px
+    </p>
+    <ul class="tags">
+      <li class="tags-item"><a href="#" class="tags-link">Пиво</a></li>
+      <li class="tags-item"><a href="#" class="tags-link">Алкоголь</a></li>
+      <li class="tags-item"><a href="#" class="tags-link">Напиток</a></li>
+      <li class="tags-item"><a href="#" class="tags-link">Продукты</a></li>
+    </ul>
+    <div class="icon-selected__buttons">
+      <button class="btn btn_wide btn_filled" type="button">Скачать</button>
+      <button class="btn btn_wide btn_stroked" type="button">Скопировать</button>
+    </div>
+  </div>
+</div>

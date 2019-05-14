@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
@@ -13,6 +13,7 @@ export class IconsListComponent implements OnInit {
 
   icons: Observable<any[]>;
   _db: AngularFirestore;
+  selected: boolean = false;
 
   constructor(db: AngularFirestore) {
     this.icons = db.collection('icons').valueChanges();
@@ -20,6 +21,10 @@ export class IconsListComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  toggleVisibility(visible: boolean) {
+    this.selected = visible;
   }
 
 }
